@@ -331,6 +331,8 @@ class Episode(models.Model):
         _("pretty description"), blank=True,
         help_text="May be longer than 4000 characters and contain HTML tags and styling.")
 
+    link = models.URLField(_("youtube"), help_text=_("""Youtubeko atalaren url."""))
+
     description = models.TextField(
         _("description"), max_length=4000, blank=True, help_text=_("""
             This is your chance to tell potential subscribers all about your podcast.
